@@ -24,6 +24,7 @@ yarn-error.log*
 
 package-lock.json
 dist
+example
 
 # Output of 'npm pack'
 *.tgz

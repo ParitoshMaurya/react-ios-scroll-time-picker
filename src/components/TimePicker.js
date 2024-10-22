@@ -45,6 +45,10 @@ function TimePicker({
       };
    }, [setIsOpen]);
 
+   useEffect(() => {
+      setInputValue(initialValue);
+   }, [initialValue]);
+
    const handleClick = (e) => {
       if (isOpen) {
          if (e.target.closest('.react-ios-time-picker-selection')) {
