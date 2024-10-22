@@ -1,14 +1,14 @@
 {
-   "name": "react-ios-time-picker",
-   "version": "0.2.2",
-   "description": "A modern time picker for your React app.",
+   "name": "react-scroll-time-picker",
+   "version": "1.0.0",
+   "description": "A modern time picker for your React web app.",
    "main": "dist/TimePicker.js",
    "module": "dist/TimePicker.js",
    "typings": "dist/TimePicker.d.ts",
    "license": "MIT",
    "repository": {
       "type": "git",
-      "url": "https://github.com/MEddarhri/react-ios-time-picker"
+      "url": "https://github.com/ParitoshMaurya/react-scroll-time-picker"
    },
    "files": [
       "dist",
@@ -77,7 +77,7 @@
       "select time"
    ],
    "author": {
-      "name": "MEddarhri",
-      "email": "mokhtareddarhri@gmail.com"
+      "name": "Paritosh Maurya",
+      "email": "paritoshmaurya56@gmail.com"
    }
 }

@@ -1,5 +1,4 @@
-import React, { useEffect, useState } from 'react';
-import { Portal } from 'react-portal';
+import React, { useEffect, useState, useRef } from 'react';
 import TimePickerSelection from './TimePickerSelection';
 import '../styles/react-ios-time-picker.css';
 
@@ -30,8 +29,28 @@ function TimePicker({
    const [isOpen, setIsOpen] = useState(initialIsOpenValue);
    const [height, setHeight] = useState(cellHeight);
    const [inputValue, setInputValue] = useState(initialValue);
+   const timePickerRef = useRef(null);
 
-   const handleClick = () => {
+
+   useEffect(() => {
+      const handleClickOutside = (event) => {
+         if (timePickerRef.current && !timePickerRef.current.contains(event.target)) {
+            setIsOpen(false);
+         }
+      };
+
+      document.addEventListener('mousedown', handleClickOutside);
+      return () => {
+         document.removeEventListener('mousedown', handleClickOutside);
+      };
+   }, [setIsOpen]);
+
+   const handleClick = (e) => {
+      if (isOpen) {
+         if (e.target.closest('.react-ios-time-picker-selection')) {
+            return;
+         }
+      }
       setIsOpen(!isOpen);
    };
 
@@ -66,8 +85,7 @@ function TimePicker({
    };
 
    return (
-      <>
-         <div className="react-ios-time-picker-main" onClick={handleClick}>
+         <div ref={timePickerRef} className="react-ios-time-picker-main" onClick={handleClick}>
             <input
                id={id}
                name={name}
@@ -80,19 +98,10 @@ function TimePicker({
                required={required}
                onFocus={handleFocus}
             />
+            {
+               isOpen && !disabled && (<TimePickerSelection {...params} />)
+            }
          </div>
-         {isOpen && !disabled && (
-            <Portal>
-               <div className="react-ios-time-picker-popup">
-                  <div
-                     className={`react-ios-time-picker-popup-overlay ${popupClassName || ''}`}
-                     onClick={() => setIsOpen(!isOpen)}
-                  />
-                  <TimePickerSelection {...params} />
-               </div>
-            </Portal>
-         )}
-      </>
    );
 }
 

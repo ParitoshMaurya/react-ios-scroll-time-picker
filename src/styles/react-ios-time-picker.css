@@ -1,8 +1,8 @@
-* {
-   margin: 0;
-   padding: 0;
-   box-sizing: border-box;
-   font-family: 'Roboto', sans-serif;
+.react-ios-time-picker-main {
+   position: relative;
+
+.react-ios-time-picker-selection {
+   position: absolute;
 }
 
 button {
@@ -282,4 +282,5 @@ input:focus {
 
 .react-ios-time-picker-hour-format-transition {
    transition: transform 100ms ease-out;
+}
 }
