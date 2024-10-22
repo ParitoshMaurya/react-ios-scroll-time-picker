@@ -2,3 +2,10 @@
 node_modules
 src
 example
+.babelrc
+.prettierrc.json
+babel.config.json
+webpack.config.js
+pnpm-lock.yaml
+.gitignore
+.eslintrc.json

@@ -1,8 +1,8 @@
-[![npm](https://img.shields.io/npm/v/react-scroll-time-picker)](https://www.npmjs.com/package/react-scroll-time-picker) ![downloads](https://img.shields.io/npm/dt/react-scroll-time-picker?color=blue&logo=npm&logoColor=blue)
+[![npm](https://img.shields.io/npm/v/react-ios-scroll-time-picker)](https://www.npmjs.com/package/react-ios-scroll-time-picker) ![downloads](https://img.shields.io/npm/dt/react-ios-scroll-time-picker?color=blue&logo=npm&logoColor=blue)
 
-# React Scroll Time Picker
+# React Ios Scroll Time Picker
 
-![React-scroll-time-picker demo](https://res.cloudinary.com/emdpro/image/upload/v1661245249/demo_bcmzme.gif)
+![React-ios-scroll-time-picker demo](https://res.cloudinary.com/emdpro/image/upload/v1661245249/demo_bcmzme.gif)
 
 A modern time picker for your next React app.
 
@@ -12,7 +12,7 @@ A modern time picker for your next React app.
 ## install
 
 ```
-npm install react-scroll-time-picker
+npm install react-ios-scroll-time-picker
 ```
 
 ## Usage
@@ -23,7 +23,7 @@ npm install react-scroll-time-picker
 
 ```js
 import React, { useState } from 'react';
-import { TimePicker } from 'react-scroll-time-picker';
+import { TimePicker } from 'react-ios-scroll-time-picker';
 
 export default const  MyApp = () => {
    const [value, setValue] = useState('10:00');
@@ -46,7 +46,7 @@ export default const  MyApp = () => {
 
 ```js
 import React, { useState } from 'react';
-import { TimePicker } from 'react-scroll-time-picker';
+import { TimePicker } from 'react-ios-scroll-time-picker';
 
 export default const  MyApp = () => {
    const [value, setValue] = useState('10:00 AM');
@@ -92,8 +92,8 @@ export default const  MyApp = () => {
 ## Contributions Welcome!
 
 ```shell
-git clone https://github.com/ParitoshMaurya/react-scroll-time-picker
-cd react-scroll-time-picker
+git clone https://github.com/ParitoshMaurya/react-ios-scroll-time-picker
+cd react-ios-scroll-time-picker
 ```
 
 ## License
